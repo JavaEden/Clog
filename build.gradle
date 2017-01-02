@@ -8,7 +8,7 @@ plugins {
 }
 
 group 'com.eden'
-version = 'v1.2.4'
+version = 'v1.3.0'
 
 sourceCompatibility = '1.8'
 targetCompatibility = '1.8'
