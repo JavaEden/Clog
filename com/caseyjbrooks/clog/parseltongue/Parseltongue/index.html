@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+
+
+<meta charset="utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+<meta name="generator" content="Orchid 0.15.1"/>
+<link rel="icon" href="null">
+
+
+<meta name="robots" content="index, follow">
+
+
+
+<title>Parseltongue</title>
+
+
+<meta name="description" content="Simple yet powerful logging and string formatting for Java">
+
+
+
+
+
+<script>
+    window.site = {"orchidVersion":"0.15.1","baseUrl":"https://javaeden.github.io/Clog","environment":"production","version":"2.0.7"};
+</script>
+
+
+
+
+<!-- start:inject styles -->
+<link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://javaeden.github.io/Clog/BsDoc/f29d06d0/ajax/libs/github-fork-ribbon-css/0.2.0/gh-fork-ribbon.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://javaeden.github.io/Clog/BsDoc/f29d06d0/assets/css/bsdoc.css"/>
+<link rel="stylesheet" type="text/css" href="https://javaeden.github.io/Clog/PrismJS/prism-themes/master/themes/prism-darcula.css"/>
+<link rel="stylesheet" type="text/css" href="https://javaeden.github.io/Clog/ajax/libs/prism/1.8.4/plugins/line-numbers/prism-line-numbers.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://javaeden.github.io/Clog/ajax/libs/prism/1.8.4/plugins/line-highlight/prism-line-highlight.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://javaeden.github.io/Clog/ajax/libs/prism/1.8.4/plugins/toolbar/prism-toolbar.min.css"/>
+<!-- end:inject styles -->
+
+
+</head>
+<body>
+
+
+
+
+<a class="github-fork-ribbon left-top"
+   href="https://github.com/JavaEden/Clog"
+   title="Fork me on GitHub">Fork me on GitHub</a>
+
+
+<header class="navbar navbar-fixed-top bs-docs-nav">
+    <div class="container">
+        <div class="navbar-header" role="banner">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://javaeden.github.io/Clog">Clog</a>
+        </div>
+        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Wiki<span class="caret"></span></a>
+                            <ul class="dropdown-menu scrollable-menu">
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/wiki/overview">Overview</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/wiki/download">Download</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/wiki/logging">Logging</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/wiki/parseltongue">Parseltongue</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/wiki/spells">The Standard Book of Spells</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/wiki/changelog">Changelog</a></li>
+                                
+                            </ul>
+                        </li>
+                    
+                
+                    
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Integrations<span class="caret"></span></a>
+                            <ul class="dropdown-menu scrollable-menu">
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/clog4j">Clog4j</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/android-clog">Android Clog</a></li>
+                                
+                            </ul>
+                        </li>
+                    
+                
+                    
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">All Packages<span class="caret"></span></a>
+                            <ul class="dropdown-menu scrollable-menu">
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog">com.caseyjbrooks.clog</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/parseltongue">com.caseyjbrooks.clog.parseltongue</a></li>
+                                
+                            </ul>
+                        </li>
+                    
+                
+                    
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">All Classes<span class="caret"></span></a>
+                            <ul class="dropdown-menu scrollable-menu">
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/Clog">Clog</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/Clog/Priority">Clog.Priority</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/ClogFormatter">ClogFormatter</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/ClogLogger">ClogLogger</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/ClogProfile">ClogProfile</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/DefaultLogger">DefaultLogger</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/EmptyLogger">EmptyLogger</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/IClog">IClog</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/parseltongue/Incantation">Incantation</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/parseltongue/MethodIncantation">MethodIncantation</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/parseltongue/Parseltongue">Parseltongue</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/ProfileSupplier">ProfileSupplier</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/parseltongue/Spell">Spell</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/parseltongue/TheStandardBookOfSpells">TheStandardBookOfSpells</a></li>
+                                
+                            </ul>
+                        </li>
+                    
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+<div id="top"></div>
+
+
+    <div class="bs-docs-masthead" id="jumbotron">
+        <div class="container">
+            <h1 class="home-title">Parseltongue</h1>
+        </div>
+    </div>
+
+
+<div class="container bs-docs-container">
+    <div class="row">
+        <div class="col-md-9" role="main">
+        <nav aria-label="breadcrumb">
+    <ul class="breadcrumb">
+    
+    
+        <li class="breadcrumb-item active" aria-current="page">Parseltongue</li>
+    
+    
+    </ul>
+</nav>
+        
+
+        
+        
+            
+    <!-- start:inject components -->
+    
+        
+            
+        
+            
+                
+                    
+                        <div class="orchid-sourcedoc">
+
+
+<p id="summary">
+    <b>In package <a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/parseltongue">com.caseyjbrooks.clog.parseltongue</a></b>
+</p>
+<p>
+    <code style="padding: 0;">
+    public class <a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/parseltongue/Parseltongue">Parseltongue</a> extends Object implements <a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/ClogFormatter">ClogFormatter</a>
+    </code>
+</p>
+<div class="class-description" id="description">
+
+</div>
+
+
+
+
+
+
+
+
+
+<h2 id="constructors">Constructors</h2>
+
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="constructor__public_Parseltongue__">
+        <code>
+        public <a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/parseltongue/Parseltongue">Parseltongue</a>()
+        </code>
+    </div>
+    <div class="panel-body"></div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item">No parameters</li>
+
+</ul>
+
+</div>
+
+
+
+
+    <h2 id="methods">Methods</h2>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__public_void_findSpells_Class___c_">
+        <code>
+        public void findSpells(Class&lt;&gt; c)
+        </code>
+    </div>
+    <div class="panel-body"></div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        Class&lt;&gt; c
+        </code>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        void
+        </code>
+    </div>
+    <div></div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__public_void_findSpells_Object_o_">
+        <code>
+        public void findSpells(Object o)
+        </code>
+    </div>
+    <div class="panel-body"></div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        Object o
+        </code>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        void
+        </code>
+    </div>
+    <div></div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__public_void_addSpells_Incantation_incantations_">
+        <code>
+        public void addSpells(<a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/parseltongue/Incantation">Incantation</a> incantations)
+        </code>
+    </div>
+    <div class="panel-body"></div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        <a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/parseltongue/Incantation">Incantation</a> incantations
+        </code>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        void
+        </code>
+    </div>
+    <div></div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__public_boolean_arePrivateFieldsAccessible__">
+        <code>
+        public boolean arePrivateFieldsAccessible()
+        </code>
+    </div>
+    <div class="panel-body"></div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item">No parameters</li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        boolean
+        </code>
+    </div>
+    <div></div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__public_void_setPrivateFieldsAccessible_boolean_privateFieldsAccessible_">
+        <code>
+        public void setPrivateFieldsAccessible(boolean privateFieldsAccessible)
+        </code>
+    </div>
+    <div class="panel-body"></div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        boolean privateFieldsAccessible
+        </code>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        void
+        </code>
+    </div>
+    <div></div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__public_String_format_String_message__Object_params_">
+        <code>
+        public String format(String message, Object params)
+        </code>
+    </div>
+    <div class="panel-body"></div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        String message
+        </code>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        Object params
+        </code>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        String
+        </code>
+    </div>
+    <div></div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__public_Object_transfigureObject_String_key__Object_reagent__Object_reagents_">
+        <code>
+        public Object transfigureObject(String key, Object reagent, Object reagents)
+        </code>
+    </div>
+    <div class="panel-body"></div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        String key
+        </code>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        Object reagent
+        </code>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        Object reagents
+        </code>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        Object
+        </code>
+    </div>
+    <div></div>
+</div>
+
+</div>
+
+
+
+</div>
+                    
+                
+            
+        
+    
+    <!-- end:inject components -->
+
+
+        
+        </div>
+
+        <!-- Page navigation
+        =========================================== -->
+        <div class="col-md-3" role="complementary">
+        <div class="bs-docs-sidebar hidden-print" id="bs-docs-sidebar">
+    
+
+    <ul class="nav bs-docs-sidenav">
+        
+    </ul>
+
+    
+    <!-- start:inject components -->
+    
+    <!-- end:inject components -->
+
+
+
+    <a class="back-to-top" href="#top">
+        <i class="glyphicon glyphicon-chevron-up"></i> Back to top
+    </a>
+</div>
+
+        </div>
+    </div>
+</div>
+
+
+<div id="footer">
+    <div class="container bs-docs-container">
+    <footer class="bs-docs-footer" role="contentinfo">
+    <div class="row">
+        <div class="col-xs-12">
+            <nav aria-label="navigateClasses">
+                <ul class="pager">
+                    
+
+                    
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="icons">
+    
+    
+        <a href="https://github.com/JavaEden/Clog" class="fa fa-github"></a>
+    
+    
+    </div>
+    <br>
+    <p>
+    Documentation template based on the
+    <a href="https://github.com/mistic100/jekyll-bootstrap-doc">Jekyll Bootstrap Doc</a>
+    Jekyll theme by the <a href="https://getbootstrap.com">Bootstrap team</a>. Site created with
+    <a href="https://orchid.netlify.com">Orchid</a>.
+</p>
+
+<ul class="bs-docs-footer-links muted">
+    <li>Currently 2.0.7</li>
+</ul>
+
+</footer>
+    </div>
+</div>
+
+
+<!-- start:inject scripts -->
+<script src="https://javaeden.github.io/Clog/BsDoc/f29d06d0/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://javaeden.github.io/Clog/BsDoc/f29d06d0/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<script src="https://javaeden.github.io/Clog/BsDoc/f29d06d0/ajax/libs/bootbox.js/4.3.0/bootbox.min.js"></script>
+<script src="https://javaeden.github.io/Clog/BsDoc/f29d06d0/assets/js/bsdoc.js"></script>
+<script src="https://javaeden.github.io/Clog/ajax/libs/prism/1.8.4/prism.min.js"></script>
+<script src="https://javaeden.github.io/Clog/ajax/libs/prism/1.8.4/components/prism-yaml.min.js"></script>
+<script src="https://javaeden.github.io/Clog/ajax/libs/prism/1.8.4/components/prism-java.min.js"></script>
+<script src="https://javaeden.github.io/Clog/ajax/libs/prism/1.8.4/components/prism-groovy.min.js"></script>
+<script src="https://javaeden.github.io/Clog/ajax/libs/prism/1.8.4/components/prism-markdown.min.js"></script>
+<script src="https://javaeden.github.io/Clog/ajax/libs/prism/1.8.4/plugins/line-numbers/prism-line-numbers.min.js"></script>
+<script src="https://javaeden.github.io/Clog/ajax/libs/prism/1.8.4/plugins/line-highlight/prism-line-highlight.min.js"></script>
+<script src="https://javaeden.github.io/Clog/ajax/libs/prism/1.8.4/plugins/toolbar/prism-toolbar.min.js"></script>
+<script src="https://javaeden.github.io/Clog/ajax/libs/prism/1.8.4/plugins/show-language/prism-show-language.min.js"></script>
+<script src="https://javaeden.github.io/Clog/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
+<script src="https://javaeden.github.io/Clog/ajax/libs/prism/1.8.4/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+<!-- end:inject scripts -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/1.2.0/trianglify.min.js"></script>
+
+<script>
+    $(function () {
+        window.colors = ['#2a623d', '#000000'];
+                  
+    trianglify({"x_colors":["#000","#2a623d","#000"]});
+
+        buildNav();
+    });
+</script>
+
+</body>
+</html>

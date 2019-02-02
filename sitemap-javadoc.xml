@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://javaeden.github.io/Clog/com/caseyjbrooks/clog</loc>
+        <lastmod>2019-02-02T19:45:04.712</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://javaeden.github.io/Clog/com/caseyjbrooks/clog/Clog</loc>
+        <lastmod>2019-02-02T19:45:04.678</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://javaeden.github.io/Clog/com/caseyjbrooks/clog/Clog/Priority</loc>
+        <lastmod>2019-02-02T19:45:04.691</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://javaeden.github.io/Clog/com/caseyjbrooks/clog/ClogFormatter</loc>
+        <lastmod>2019-02-02T19:45:04.680</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://javaeden.github.io/Clog/com/caseyjbrooks/clog/DefaultLogger</loc>
+        <lastmod>2019-02-02T19:45:04.681</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://javaeden.github.io/Clog/com/caseyjbrooks/clog/IClog</loc>
+        <lastmod>2019-02-02T19:45:04.682</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://javaeden.github.io/Clog/com/caseyjbrooks/clog/parseltongue</loc>
+        <lastmod>2019-02-02T19:45:04.709</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://javaeden.github.io/Clog/com/caseyjbrooks/clog/parseltongue/Spell</loc>
+        <lastmod>2019-02-02T19:45:04.683</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://javaeden.github.io/Clog/com/caseyjbrooks/clog/parseltongue/TheStandardBookOfSpells</loc>
+        <lastmod>2019-02-02T19:45:04.684</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://javaeden.github.io/Clog/com/caseyjbrooks/clog/parseltongue/MethodIncantation</loc>
+        <lastmod>2019-02-02T19:45:04.685</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://javaeden.github.io/Clog/com/caseyjbrooks/clog/parseltongue/Parseltongue</loc>
+        <lastmod>2019-02-02T19:45:04.686</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://javaeden.github.io/Clog/com/caseyjbrooks/clog/parseltongue/Incantation</loc>
+        <lastmod>2019-02-02T19:45:04.688</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://javaeden.github.io/Clog/com/caseyjbrooks/clog/ClogProfile</loc>
+        <lastmod>2019-02-02T19:45:04.689</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://javaeden.github.io/Clog/com/caseyjbrooks/clog/EmptyLogger</loc>
+        <lastmod>2019-02-02T19:45:04.690</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://javaeden.github.io/Clog/com/caseyjbrooks/clog/ProfileSupplier</loc>
+        <lastmod>2019-02-02T19:45:04.692</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://javaeden.github.io/Clog/com/caseyjbrooks/clog/ClogLogger</loc>
+        <lastmod>2019-02-02T19:45:04.694</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    
+</urlset>

@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+
+
+<meta charset="utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+<meta name="generator" content="Orchid 0.15.1"/>
+<link rel="icon" href="null">
+
+
+<meta name="robots" content="index, follow">
+
+
+
+<title>TheStandardBookOfSpells</title>
+
+
+<meta name="description" content="Simple yet powerful logging and string formatting for Java">
+
+
+
+
+
+<script>
+    window.site = {"orchidVersion":"0.15.1","baseUrl":"https://javaeden.github.io/Clog","environment":"production","version":"2.0.7"};
+</script>
+
+
+
+
+<!-- start:inject styles -->
+<link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://javaeden.github.io/Clog/BsDoc/f29d06d0/ajax/libs/github-fork-ribbon-css/0.2.0/gh-fork-ribbon.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://javaeden.github.io/Clog/BsDoc/f29d06d0/assets/css/bsdoc.css"/>
+<link rel="stylesheet" type="text/css" href="https://javaeden.github.io/Clog/PrismJS/prism-themes/master/themes/prism-darcula.css"/>
+<link rel="stylesheet" type="text/css" href="https://javaeden.github.io/Clog/ajax/libs/prism/1.8.4/plugins/line-numbers/prism-line-numbers.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://javaeden.github.io/Clog/ajax/libs/prism/1.8.4/plugins/line-highlight/prism-line-highlight.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://javaeden.github.io/Clog/ajax/libs/prism/1.8.4/plugins/toolbar/prism-toolbar.min.css"/>
+<!-- end:inject styles -->
+
+
+</head>
+<body>
+
+
+
+
+<a class="github-fork-ribbon left-top"
+   href="https://github.com/JavaEden/Clog"
+   title="Fork me on GitHub">Fork me on GitHub</a>
+
+
+<header class="navbar navbar-fixed-top bs-docs-nav">
+    <div class="container">
+        <div class="navbar-header" role="banner">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://javaeden.github.io/Clog">Clog</a>
+        </div>
+        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Wiki<span class="caret"></span></a>
+                            <ul class="dropdown-menu scrollable-menu">
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/wiki/overview">Overview</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/wiki/download">Download</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/wiki/logging">Logging</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/wiki/parseltongue">Parseltongue</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/wiki/spells">The Standard Book of Spells</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/wiki/changelog">Changelog</a></li>
+                                
+                            </ul>
+                        </li>
+                    
+                
+                    
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Integrations<span class="caret"></span></a>
+                            <ul class="dropdown-menu scrollable-menu">
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/clog4j">Clog4j</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/android-clog">Android Clog</a></li>
+                                
+                            </ul>
+                        </li>
+                    
+                
+                    
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">All Packages<span class="caret"></span></a>
+                            <ul class="dropdown-menu scrollable-menu">
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog">com.caseyjbrooks.clog</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/parseltongue">com.caseyjbrooks.clog.parseltongue</a></li>
+                                
+                            </ul>
+                        </li>
+                    
+                
+                    
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">All Classes<span class="caret"></span></a>
+                            <ul class="dropdown-menu scrollable-menu">
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/Clog">Clog</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/Clog/Priority">Clog.Priority</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/ClogFormatter">ClogFormatter</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/ClogLogger">ClogLogger</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/ClogProfile">ClogProfile</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/DefaultLogger">DefaultLogger</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/EmptyLogger">EmptyLogger</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/IClog">IClog</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/parseltongue/Incantation">Incantation</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/parseltongue/MethodIncantation">MethodIncantation</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/parseltongue/Parseltongue">Parseltongue</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/ProfileSupplier">ProfileSupplier</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/parseltongue/Spell">Spell</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/parseltongue/TheStandardBookOfSpells">TheStandardBookOfSpells</a></li>
+                                
+                            </ul>
+                        </li>
+                    
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+<div id="top"></div>
+
+
+    <div class="bs-docs-masthead" id="jumbotron">
+        <div class="container">
+            <h1 class="home-title">TheStandardBookOfSpells</h1>
+        </div>
+    </div>
+
+
+<div class="container bs-docs-container">
+    <div class="row">
+        <div class="col-md-9" role="main">
+        <nav aria-label="breadcrumb">
+    <ul class="breadcrumb">
+    
+    
+        <li class="breadcrumb-item active" aria-current="page">TheStandardBookOfSpells</li>
+    
+    
+    </ul>
+</nav>
+        
+
+        
+        
+            
+    <!-- start:inject components -->
+    
+        
+            
+        
+            
+                
+                    
+                        <div class="orchid-sourcedoc">
+
+
+<p id="summary">
+    <b>In package <a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/parseltongue">com.caseyjbrooks.clog.parseltongue</a></b>
+</p>
+<p>
+    <code style="padding: 0;">
+    public class <a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/parseltongue/TheStandardBookOfSpells">TheStandardBookOfSpells</a> extends Object
+    </code>
+</p>
+<div class="class-description" id="description">
+<p>A collection of all the Spells available by default within Parseltongue formatters.</p>
+
+</div>
+
+
+
+
+
+
+
+
+
+<h2 id="constructors">Constructors</h2>
+
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="constructor__public_TheStandardBookOfSpells__">
+        <code>
+        public <a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/parseltongue/TheStandardBookOfSpells">TheStandardBookOfSpells</a>()
+        </code>
+    </div>
+    <div class="panel-body"></div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item">No parameters</li>
+
+</ul>
+
+</div>
+
+
+
+
+    <h2 id="methods">Methods</h2>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__public_static_String_toUpper_Object_data_">
+        <code>
+        public static String toUpper(Object data)
+        </code>
+    </div>
+    <div class="panel-body"><p>Calls '.toString()' on an object, then formats the output as uppercase</p>
+<p>Clog example: #{ $1 | uppercase }</p>
+</div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        Object data
+        </code>
+        
+            <br><br>
+            <div><p>the object to format</p>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        String
+        </code>
+    </div>
+    <div><p>the uppercase String representation of that object</p>
+</div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__public_static_String_toLower_Object_data_">
+        <code>
+        public static String toLower(Object data)
+        </code>
+    </div>
+    <div class="panel-body"><p>Calls '.toString()' on an object, then formats the output as lowercase</p>
+<p>Clog example: #{ $1 | lowercase }</p>
+</div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        Object data
+        </code>
+        
+            <br><br>
+            <div><p>the object to format</p>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        String
+        </code>
+    </div>
+    <div><p>the trimmed String representation of that object</p>
+</div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__public_static_String_trim_Object_data_">
+        <code>
+        public static String trim(Object data)
+        </code>
+    </div>
+    <div class="panel-body"><p>Calls '.toString()' on an object, then trims whitespace from its output</p>
+<p>Clog example: #{ $1 | trim }</p>
+</div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        Object data
+        </code>
+        
+            <br><br>
+            <div><p>the object to format</p>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        String
+        </code>
+    </div>
+    <div><p>the lowercase String representation of that object</p>
+</div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__public_static_String_split_Object_data__String_delimiter_">
+        <code>
+        public static String split(Object data, String delimiter)
+        </code>
+    </div>
+    <div class="panel-body"><p>Calls '.toString()' on an object, then splits it into an array of String based on a given delimiter</p>
+<p>Clog example: #{ $1 | split('.') }</p>
+</div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        Object data
+        </code>
+        
+            <br><br>
+            <div><p>the object to format</p>
+</div>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        String delimiter
+        </code>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        String
+        </code>
+    </div>
+    <div><p>the split String representation of that object</p>
+</div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__public_static_String_capitalize_Object_data_">
+        <code>
+        public static String capitalize(Object data)
+        </code>
+    </div>
+    <div class="panel-body"><p>Calls '.toString()' on an object, then capitalizes the output</p>
+<p>Clog example: #{ $1 | capitalize }</p>
+</div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        Object data
+        </code>
+        
+            <br><br>
+            <div><p>the object to format</p>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        String
+        </code>
+    </div>
+    <div><p>the capitalized String representation of that object</p>
+</div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__public_static_String_repeat_Object_data__String_template_">
+        <code>
+        public static String repeat(Object data, String template)
+        </code>
+    </div>
+    <div class="panel-body"><p>Repeats the input data for each element of the array, applying the corresponding Clog format String.</p>
+<p>Clog example: #{ $1 | repeat('* #{ $1 }') }</p>
+</div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        Object data
+        </code>
+        
+            <br><br>
+            <div><p>the data to repeat</p>
+</div>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        String template
+        </code>
+        
+            <br><br>
+            <div><p>the Clog template to render for each element</p>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        String
+        </code>
+    </div>
+    <div><p>the repeated output</p>
+</div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__public_static_String_repeat_Iterable___data__String_template_">
+        <code>
+        public static String repeat(Iterable&lt;&gt; data, String template)
+        </code>
+    </div>
+    <div class="panel-body"><p>Repeats the input data for each element of the Iterable, applying the corresponding Clog format String.</p>
+<p>Clog example: #{ $1 | repeat('#{ $1 }') }</p>
+</div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        Iterable&lt;&gt; data
+        </code>
+        
+            <br><br>
+            <div><p>the data to repeat</p>
+</div>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        String template
+        </code>
+        
+            <br><br>
+            <div><p>the Clog template to render for each element</p>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        String
+        </code>
+    </div>
+    <div><p>the repeated output</p>
+</div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__public_static_String_join_Object_data__String_separator_">
+        <code>
+        public static String join(Object data, String separator)
+        </code>
+    </div>
+    <div class="panel-body"><p>Calls '.toString()' on every element in the array, then joins them with a specified separator String. Based on
+the Android Open Source Project TestUtils.java class.</p>
+<p>Clog example: #{ $1 | join(', ') }</p>
+</div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        Object data
+        </code>
+        
+            <br><br>
+            <div><p>an Array of any type to join</p>
+</div>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        String separator
+        </code>
+        
+            <br><br>
+            <div><p>a String to concatenate between every element's String representation</p>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        String
+        </code>
+    </div>
+    <div><p>the joined string</p>
+</div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__public_static_String_join_Iterable___data__String_separator_">
+        <code>
+        public static String join(Iterable&lt;&gt; data, String separator)
+        </code>
+    </div>
+    <div class="panel-body"><p>Calls '.toString()' on every element in the Iterable, then joins them with a specified separator String. Based on
+the Android Open Source Project TestUtils.java class.</p>
+<p>Clog example: #{ $1 | join(', ') }</p>
+</div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        Iterable&lt;&gt; data
+        </code>
+        
+            <br><br>
+            <div><p>an Iterable of any type to join</p>
+</div>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        String separator
+        </code>
+        
+            <br><br>
+            <div><p>a String to concatenate between every element's String representation</p>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        String
+        </code>
+    </div>
+    <div><p>the joined string</p>
+</div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__public_static_String_getClassName_Object_data_">
+        <code>
+        public static String getClassName(Object data)
+        </code>
+    </div>
+    <div class="panel-body"><p>Converts any Object to the simple Class name String of that Object</p>
+<p>Clog example: #{ $1 | className }</p>
+</div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        Object data
+        </code>
+        
+            <br><br>
+            <div><p>any object to display the simple Class name</p>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        String
+        </code>
+    </div>
+    <div><p>the simple Class name of the object</p>
+</div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__public_static_int_length_String_data_">
+        <code>
+        public static int length(String data)
+        </code>
+    </div>
+    <div class="panel-body"><p>Get the number of characters in a String</p>
+<p>Clog example: #{ $1 | length }</p>
+</div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        String data
+        </code>
+        
+            <br><br>
+            <div><p>a String to find the length of</p>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        int
+        </code>
+    </div>
+    <div><p>the length of the input String</p>
+</div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__public_static_int_length_Object_data_">
+        <code>
+        public static int length(Object data)
+        </code>
+    </div>
+    <div class="panel-body"><p>Get the number of elements in an Array</p>
+<p>Clog example: #{ $1 | length }</p>
+</div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        Object data
+        </code>
+        
+            <br><br>
+            <div><p>an Array of any type to find the length of</p>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        int
+        </code>
+    </div>
+    <div><p>the length of the input Array</p>
+</div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__public_static_int_length_Collection___data_">
+        <code>
+        public static int length(Collection&lt;&gt; data)
+        </code>
+    </div>
+    <div class="panel-body"><p>Get the number of elements in a Collection</p>
+<p>Clog example: #{ $1 | length }</p>
+</div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        Collection&lt;&gt; data
+        </code>
+        
+            <br><br>
+            <div><p>a Collection of any type to find the length of</p>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        int
+        </code>
+    </div>
+    <div><p>the length of the input Collection</p>
+</div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__public_static_Object_date_Calendar_data_">
+        <code>
+        public static Object date(Calendar data)
+        </code>
+    </div>
+    <div class="panel-body"><p>Formats a Calendar object with to human-readable date of the form 'yyyy/MM/dd HH:mm:ss'</p>
+<p>Clog example: #{ $1 | date }</p>
+</div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        Calendar data
+        </code>
+        
+            <br><br>
+            <div><p>a Calendar object to get the date of</p>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        Object
+        </code>
+    </div>
+    <div><p>the human-readable date</p>
+</div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__public_static_Object_date_Calendar_data__String_formatString_">
+        <code>
+        public static Object date(Calendar data, String formatString)
+        </code>
+    </div>
+    <div class="panel-body"><p>Formats a Calendar object with to human-readable date of the form specified</p>
+<p>Clog example: #{ $1 | date('yyyy-MM-dd') }</p>
+</div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        Calendar data
+        </code>
+        
+            <br><br>
+            <div><p>a Calendar object to get the date of</p>
+</div>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        String formatString
+        </code>
+        
+            <br><br>
+            <div><p>the String used to format the Calendar object</p>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        Object
+        </code>
+    </div>
+    <div><p>the human-readable date</p>
+</div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__public_static_Object_ansiForegroundColorStart_Object_data__String_color_">
+        <code>
+        public static Object ansiForegroundColorStart(Object data, String color)
+        </code>
+    </div>
+    <div class="panel-body"><p>Inserts the appropriate ANSI codes to change the foreground color of the text. The foreground color will be used
+until an ANSI 'reset' character is added with the 'reset' Spell. Should only be used when output is intended to
+be displayed in a Terminal. Works on both Unix/Linux terminals and Windows command prompt.</p>
+<p>Available Colors (case insensitive):
+BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE, DEFAULT</p>
+<p>Clog example: #{ $0 | fg('cyan') }</p>
+</div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        Object data
+        </code>
+        
+            <br><br>
+            <div><p>ignored</p>
+</div>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        String color
+        </code>
+        
+            <br><br>
+            <div><p>the color to change the foreground to.</p>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        Object
+        </code>
+    </div>
+    <div><p>the ANSI codes to color the foreground of the terminal text</p>
+</div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__public_static_Object_ansiBackgroundColorStart_Object_data__String_color_">
+        <code>
+        public static Object ansiBackgroundColorStart(Object data, String color)
+        </code>
+    </div>
+    <div class="panel-body"><p>Inserts the appropriate ANSI codes to change the background color of the text. The background color will be used
+until an ANSI 'reset' character is added with the 'reset' Spell. Should only be used when output is intended to
+be displayed in a Terminal. Works on both Unix/Linux terminals and Windows command prompt.</p>
+<p>Available Colors (case insensitive):
+BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE, DEFAULT</p>
+<p>Clog example: #{ $0 | bg('yellow') }</p>
+</div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        Object data
+        </code>
+        
+            <br><br>
+            <div><p>ignored</p>
+</div>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        String color
+        </code>
+        
+            <br><br>
+            <div><p>the color to change the background to.</p>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        Object
+        </code>
+    </div>
+    <div><p>the ANSI codes to color the background of the terminal text</p>
+</div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__public_static_Object_ansiStop_Object_data_">
+        <code>
+        public static Object ansiStop(Object data)
+        </code>
+    </div>
+    <div class="panel-body"><p>Inserts the appropriate ANSI codes to reset the terminal text colors. Should only be used when output is intended
+to be displayed in a Terminal. Works on both Unix/Linux terminals and Windows command prompt.</p>
+</div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        Object data
+        </code>
+        
+            <br><br>
+            <div><p>ignored</p>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        Object
+        </code>
+    </div>
+    <div><p>the ANSI codes to reset the terminal colors</p>
+</div>
+</div>
+
+</div>
+
+
+
+</div>
+                    
+                
+            
+        
+    
+    <!-- end:inject components -->
+
+
+        
+        </div>
+
+        <!-- Page navigation
+        =========================================== -->
+        <div class="col-md-3" role="complementary">
+        <div class="bs-docs-sidebar hidden-print" id="bs-docs-sidebar">
+    
+
+    <ul class="nav bs-docs-sidenav">
+        
+    </ul>
+
+    
+    <!-- start:inject components -->
+    
+    <!-- end:inject components -->
+
+
+
+    <a class="back-to-top" href="#top">
+        <i class="glyphicon glyphicon-chevron-up"></i> Back to top
+    </a>
+</div>
+
+        </div>
+    </div>
+</div>
+
+
+<div id="footer">
+    <div class="container bs-docs-container">
+    <footer class="bs-docs-footer" role="contentinfo">
+    <div class="row">
+        <div class="col-xs-12">
+            <nav aria-label="navigateClasses">
+                <ul class="pager">
+                    
+
+                    
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="icons">
+    
+    
+        <a href="https://github.com/JavaEden/Clog" class="fa fa-github"></a>
+    
+    
+    </div>
+    <br>
+    <p>
+    Documentation template based on the
+    <a href="https://github.com/mistic100/jekyll-bootstrap-doc">Jekyll Bootstrap Doc</a>
+    Jekyll theme by the <a href="https://getbootstrap.com">Bootstrap team</a>. Site created with
+    <a href="https://orchid.netlify.com">Orchid</a>.
+</p>
+
+<ul class="bs-docs-footer-links muted">
+    <li>Currently 2.0.7</li>
+</ul>
+
+</footer>
+    </div>
+</div>
+
+
+<!-- start:inject scripts -->
+<script src="https://javaeden.github.io/Clog/BsDoc/f29d06d0/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://javaeden.github.io/Clog/BsDoc/f29d06d0/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<script src="https://javaeden.github.io/Clog/BsDoc/f29d06d0/ajax/libs/bootbox.js/4.3.0/bootbox.min.js"></script>
+<script src="https://javaeden.github.io/Clog/BsDoc/f29d06d0/assets/js/bsdoc.js"></script>
+<script src="https://javaeden.github.io/Clog/ajax/libs/prism/1.8.4/prism.min.js"></script>
+<script src="https://javaeden.github.io/Clog/ajax/libs/prism/1.8.4/components/prism-yaml.min.js"></script>
+<script src="https://javaeden.github.io/Clog/ajax/libs/prism/1.8.4/components/prism-java.min.js"></script>
+<script src="https://javaeden.github.io/Clog/ajax/libs/prism/1.8.4/components/prism-groovy.min.js"></script>
+<script src="https://javaeden.github.io/Clog/ajax/libs/prism/1.8.4/components/prism-markdown.min.js"></script>
+<script src="https://javaeden.github.io/Clog/ajax/libs/prism/1.8.4/plugins/line-numbers/prism-line-numbers.min.js"></script>
+<script src="https://javaeden.github.io/Clog/ajax/libs/prism/1.8.4/plugins/line-highlight/prism-line-highlight.min.js"></script>
+<script src="https://javaeden.github.io/Clog/ajax/libs/prism/1.8.4/plugins/toolbar/prism-toolbar.min.js"></script>
+<script src="https://javaeden.github.io/Clog/ajax/libs/prism/1.8.4/plugins/show-language/prism-show-language.min.js"></script>
+<script src="https://javaeden.github.io/Clog/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
+<script src="https://javaeden.github.io/Clog/ajax/libs/prism/1.8.4/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+<!-- end:inject scripts -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/1.2.0/trianglify.min.js"></script>
+
+<script>
+    $(function () {
+        window.colors = ['#2a623d', '#000000'];
+                  
+    trianglify({"x_colors":["#000","#2a623d","#000"]});
+
+        buildNav();
+    });
+</script>
+
+</body>
+</html>

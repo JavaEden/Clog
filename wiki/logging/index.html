@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+
+
+<meta charset="utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+<meta name="generator" content="Orchid 0.15.1"/>
+<link rel="icon" href="null">
+
+
+<meta name="robots" content="index, follow">
+
+
+
+<title>Logging</title>
+
+
+<meta name="description" content="Simple yet powerful logging and string formatting for Java">
+
+
+
+<link rel="prev" href="https://javaeden.github.io/Clog/wiki/download">
+
+
+<link rel="next" href="https://javaeden.github.io/Clog/wiki/parseltongue">
+
+
+<script>
+    window.site = {"orchidVersion":"0.15.1","baseUrl":"https://javaeden.github.io/Clog","environment":"production","version":"2.0.7"};
+</script>
+
+
+
+
+<!-- start:inject styles -->
+<link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://javaeden.github.io/Clog/BsDoc/f29d06d0/ajax/libs/github-fork-ribbon-css/0.2.0/gh-fork-ribbon.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://javaeden.github.io/Clog/BsDoc/f29d06d0/assets/css/bsdoc.css"/>
+<link rel="stylesheet" type="text/css" href="https://javaeden.github.io/Clog/PrismJS/prism-themes/master/themes/prism-darcula.css"/>
+<link rel="stylesheet" type="text/css" href="https://javaeden.github.io/Clog/ajax/libs/prism/1.8.4/plugins/line-numbers/prism-line-numbers.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://javaeden.github.io/Clog/ajax/libs/prism/1.8.4/plugins/line-highlight/prism-line-highlight.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://javaeden.github.io/Clog/ajax/libs/prism/1.8.4/plugins/toolbar/prism-toolbar.min.css"/>
+<!-- end:inject styles -->
+
+
+</head>
+<body>
+
+
+
+
+<a class="github-fork-ribbon left-top"
+   href="https://github.com/JavaEden/Clog"
+   title="Fork me on GitHub">Fork me on GitHub</a>
+
+
+<header class="navbar navbar-fixed-top bs-docs-nav">
+    <div class="container">
+        <div class="navbar-header" role="banner">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://javaeden.github.io/Clog">Clog</a>
+        </div>
+        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Wiki<span class="caret"></span></a>
+                            <ul class="dropdown-menu scrollable-menu">
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/wiki/overview">Overview</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/wiki/download">Download</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/wiki/logging">Logging</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/wiki/parseltongue">Parseltongue</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/wiki/spells">The Standard Book of Spells</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/wiki/changelog">Changelog</a></li>
+                                
+                            </ul>
+                        </li>
+                    
+                
+                    
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Integrations<span class="caret"></span></a>
+                            <ul class="dropdown-menu scrollable-menu">
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/clog4j">Clog4j</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/android-clog">Android Clog</a></li>
+                                
+                            </ul>
+                        </li>
+                    
+                
+                    
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">All Packages<span class="caret"></span></a>
+                            <ul class="dropdown-menu scrollable-menu">
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog">com.caseyjbrooks.clog</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/parseltongue">com.caseyjbrooks.clog.parseltongue</a></li>
+                                
+                            </ul>
+                        </li>
+                    
+                
+                    
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">All Classes<span class="caret"></span></a>
+                            <ul class="dropdown-menu scrollable-menu">
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/Clog">Clog</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/Clog/Priority">Clog.Priority</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/ClogFormatter">ClogFormatter</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/ClogLogger">ClogLogger</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/ClogProfile">ClogProfile</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/DefaultLogger">DefaultLogger</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/EmptyLogger">EmptyLogger</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/IClog">IClog</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/parseltongue/Incantation">Incantation</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/parseltongue/MethodIncantation">MethodIncantation</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/parseltongue/Parseltongue">Parseltongue</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/ProfileSupplier">ProfileSupplier</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/parseltongue/Spell">Spell</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/parseltongue/TheStandardBookOfSpells">TheStandardBookOfSpells</a></li>
+                                
+                            </ul>
+                        </li>
+                    
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+<div id="top"></div>
+
+
+    <div class="bs-docs-masthead" id="jumbotron">
+        <div class="container">
+            <h1 class="home-title">Logging</h1>
+        </div>
+    </div>
+
+
+<div class="container bs-docs-container">
+    <div class="row">
+        <div class="col-md-9" role="main">
+        <nav aria-label="breadcrumb">
+    <ul class="breadcrumb">
+    
+    
+        <li class="breadcrumb-item"><a href="https://javaeden.github.io/Clog/wiki">Wiki</a></li>
+    
+    
+    
+        <li class="breadcrumb-item active" aria-current="page">Logging</li>
+    
+    
+    </ul>
+</nav>
+        
+
+        
+        
+            
+    <!-- start:inject components -->
+    
+        
+            
+        
+            
+                
+                    
+                        <h1 id="logging">Logging</h1>
+<h3 id="the-basics">The Basics</h3>
+<p>Logging with Clog is simple. Simply pick your logging priority and call that static method with the data you want to log. Clog will figure out the rest. The most basic log looks like this:</p>
+<p><code>Clog.log(&quot;Hello World&quot;);</code></p>
+<p>Clog has six built-in priorities, but can support as many or as few as you need. Those six priorities, from lowest to highest, are listed in the table below. In addition to those six priorities, there is a default logger which will be used in the case that a logger for a priority is not defined, and you can define your own custom logging priorities and refere to them by their key.</p>
+<table class="table table-condensed">
+    <thead>
+    <tr>
+        <th>Priority</th>
+        <th>Key</th>
+        <th>Clog method</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><b>Verbose</b></td>
+        <td><code>Clog.KEY_V, "v"</code></td>
+        <td><code>Clog.v(...)</code></td>
+    </tr>
+    <tr>
+        <td><b>Debug</b></td>
+        <td><code>Clog.KEY_D, "d"</code></td>
+        <td><code>Clog.d(...)</code></td>
+    </tr>
+    <tr>
+        <td><b>Info</b></td>
+        <td><code>Clog.KEY_I, "i"</code></td>
+        <td><code>Clog.i(...)</code></td>
+    </tr>
+    <tr>
+        <td><b>Warning</b></td>
+        <td><code>Clog.KEY_W, "w"</code></td>
+        <td><code>Clog.w(...)</code></td>
+    </tr>
+    <tr>
+        <td><b>Error</b></td>
+        <td><code>Clog.KEY_E, "e"</code></td>
+        <td><code>Clog.e(...)</code></td>
+    </tr>
+    <tr>
+        <td><b>Fatal (What a Terrible Failure)</b></td>
+        <td><code>Clog.KEY_WTF, "wtf"</code></td>
+        <td><code>Clog.wtf(...)</code></td>
+    </tr>
+    <tr>
+        <td><b>Default</b></td>
+        <td><code>null</code></td>
+        <td><code>Clog.log(...)</code></td>
+    </tr>
+    <tr>
+        <td><b>Custom</b></td>
+        <td>anything (see below)</td>
+        <td><code>Clog.logger(key, ...)</code></td>
+    </tr>
+    </tbody>
+</table>
+<p>For each of the above priorities, there are six logging methods that can be used, described below. Here, I use all with the 'log' priority, but all priorities and custom loggers support the same API:</p>
+<table class="table table-condensed">
+    <thead>
+    <tr>
+        <th>Method</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><pre>log(Throwable throwable)</pre></td>
+        <td>Logs an exception. Uses the default tag (see below).</td>
+    </tr>
+    <tr>
+        <td><pre>log(String tag, Throwable throwable)</pre></td>
+        <td>Logs an exception with the given tag.</td>
+    </tr>
+    <tr>
+        <td><pre>log(String message, Object... args)</pre></td>
+        <td>Formats the message with arguments and logs the message. Uses the default tag.</td>
+    </tr>
+    <tr>
+        <td><pre>log(String tag, String message, Object... args)</pre></td>
+        <td>Formats the message with arguments and logs the message with the given tag.</td>
+    </tr>
+    <tr>
+        <td><pre>log(String formatString, Throwable throwable, Object... args)</pre></td>
+        <td>Logs an exception with the formatted message. Uses the default tag.</td>
+    </tr>
+    <tr>
+        <td><pre>log(String tag, String formatString, Throwable throwable, Object... args)</pre></td>
+        <td>Logs an exception with the formatted message and the given tag.</td>
+    </tr>
+    </tbody>
+</table>
+</p>
+<h3 id="default-tag">Default Tag</h3>
+<p>Each message will be logged with a tag. If no tag is supplied to the logging method, then Clog will use a default tag. Any string can be used as a tag, but it should be kept short. The Android Log, which this library is inspired by, puts a strict limit of 26 characters on a tag, but no such limit is used with Clog. The default tag can be set with <code>setDefaultTag(String)</code>, but if the default tag is null, Clog will attempt to find the caller's simple class name and use that as the tag.</p>
+<h3 id="custom-loggers">Custom Loggers</h3>
+<p>By default, Clog has only a single logger implemented, which is a wrapper around <code>System.out.println()</code> which concatenates the tag and message. For any large applications, you will want to replace this basic logger with wrappers around your standard or more powerful logging libraries.</p>
+<blockquote>
+<p><i>See <a href="https://github.com/JavaEden/Android-Clog">Clog for Android</a> and <a href="https://github.com/JavaEden/Clog4j">Clog4j</a> for specialized Clog implementations</i></p>
+</blockquote>
+<p>The simple way to use your custom loggers is to add it directly to Clog. You can also set up multiple profiles, each with their own set of loggers (see below for more on profiles). A custom logger is any class that implements the <code>ClogLogger</code> interface, which has the following methods:</p>
+<table class="table table-condensed">
+    <thead>
+    <tr>
+        <th>Method</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><pre>boolean isActive()</pre></td>
+        <td>Checks whether this logger actually does anything. As an optimization, messages will not be formatted if they are sent to an inactive logger.</td>
+    </tr>
+    <tr>
+        <td><pre>int log(String tag, String message)</pre></td>
+        <td>Logs a message with the given tag. Returns value is mostly unnecessary, but can be used to return metadata such as the number of bytes written.</td>
+    </tr>
+    <tr>
+        <td><pre>int log(String tag, String message, Throwable throwable)</pre></td>
+        <td>Logs a message and a throwable with the given tag. Returns value is mostly unnecessary, but can be used to return metadata such as the number of bytes written.</td>
+    </tr>
+    </tbody>
+</table>
+<p>To add your custom logger to Clog, call <code>addLogger</code> with your key and an instance of your custom logger, or set it as the default with <code>setDefaultLogger</code>. Loggers can be removed with <code>removeLogger</code>. Below is an example of how to add and use your custom loggers.</p>
+<pre><code>MyLogger myLogger = new MyLogger();
+
+// set it as a fully custom logger
+Clog.addLogger(&quot;loggerKey&quot;, myLogger);
+Clog.logger(&quot;loggerKey&quot;, &quot;Hello world&quot;);
+
+// set it as a priority logger
+Clog.addLogger(KEY_I, myLogger);
+Clog.i(&quot;Hello world&quot;);
+
+// set it as the default logger
+Clog.setDefaultLogger(myLogger);
+// OR
+Clog.addLogger(null, myLogger);
+Clog.log(&quot;loggerKey&quot;, &quot;Hello world&quot;);
+</code></pre>
+<h3 id="multiple-environments">Multiple Environments</h3>
+<p>Under the hood, the String formatter and all loggers are held within instances of Clog objects, which are then access through a static hashmap of all available instances. This means you can set up a profile with all your desired loggers and parsers, and switch between profiles at will. Below is an example of setting up and using a custom profile, which is based on the Android Clog library's implementation.</p>
+<pre><code>// Create your clog profile with its loggers and chosen String formatter (see below)
+ClogFormatter formatter = new Parseltongue();
+Map&lt;String, ClogLogger&gt; loggers = new HashMap&lt;String, ClogLogger&gt;();
+loggers.put(null, new ClogI());
+loggers.put(&quot;d&quot;, new ClogD());
+loggers.put(&quot;e&quot;, new ClogE());
+loggers.put(&quot;i&quot;, new ClogI());
+loggers.put(&quot;v&quot;, new ClogV());
+loggers.put(&quot;w&quot;, new ClogW());
+loggers.put(&quot;wtf&quot;, new ClogWTF());
+
+Clog dev = new Clog(loggers, formatter);
+
+Clog.addProfile(&quot;dev&quot;, dev); //add the profile to clog
+Clog.setCurrentProfile(&quot;dev&quot;); //sets the current profile to &quot;dev&quot;
+Clog.setCurrentProfile(dev, &quot;dev&quot;); //Adds the profile to clog and switch to use it
+</code></pre>
+<h3 id="formatters">Formatters</h3>
+<p>Clog is designed to make logging easier by allowing messages to be formatted with various arguments. It comes with my custom formatting language, Parseltongue, but the formatter implementation is separated out as in interface so you can use any formatter you wish. A custom formatter is any class that implements the <code>ClogFormatter</code> interface, which has the following method:</p>
+<table class="table table-condensed">
+    <thead>
+    <tr>
+        <th>Method</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><pre>String format(String message, Object... params)</pre></td>
+        <td>Formats the message with the given parameters</td>
+    </tr>
+    </tbody>
+</table>
+<p>Custom formatters can be supplied to the profile as shown above, or added directly to the current profile with the <code>setFormatter(ClogFormatter)</code> method.</p>
+
+                    
+                
+            
+        
+    
+    <!-- end:inject components -->
+
+
+        
+        </div>
+
+        <!-- Page navigation
+        =========================================== -->
+        <div class="col-md-3" role="complementary">
+        <div class="bs-docs-sidebar hidden-print" id="bs-docs-sidebar">
+    
+
+    <ul class="nav bs-docs-sidenav">
+        
+    </ul>
+
+    
+    <!-- start:inject components -->
+    
+    <!-- end:inject components -->
+
+
+
+    <a class="back-to-top" href="#top">
+        <i class="glyphicon glyphicon-chevron-up"></i> Back to top
+    </a>
+</div>
+
+        </div>
+    </div>
+</div>
+
+
+<div id="footer">
+    <div class="container bs-docs-container">
+    <footer class="bs-docs-footer" role="contentinfo">
+    <div class="row">
+        <div class="col-xs-12">
+            <nav aria-label="navigateClasses">
+                <ul class="pager">
+                    
+                        <li class="previous">
+                            <a href="https://javaeden.github.io/Clog/wiki/download">
+                                <span aria-hidden="true">&larr;</span>
+                                <span>Download</span>
+                            </a>
+                        </li>
+                    
+
+                    
+                        <li class="next">
+                            <a href="https://javaeden.github.io/Clog/wiki/parseltongue">
+                                <span>Parseltongue</span>
+                                <span aria-hidden="true">&rarr;</span>
+                            </a>
+                        </li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="icons">
+    
+    
+        <a href="https://github.com/JavaEden/Clog" class="fa fa-github"></a>
+    
+    
+    </div>
+    <br>
+    <p>
+    Documentation template based on the
+    <a href="https://github.com/mistic100/jekyll-bootstrap-doc">Jekyll Bootstrap Doc</a>
+    Jekyll theme by the <a href="https://getbootstrap.com">Bootstrap team</a>. Site created with
+    <a href="https://orchid.netlify.com">Orchid</a>.
+</p>
+
+<ul class="bs-docs-footer-links muted">
+    <li>Currently 2.0.7</li>
+</ul>
+
+</footer>
+    </div>
+</div>
+
+
+<!-- start:inject scripts -->
+<script src="https://javaeden.github.io/Clog/BsDoc/f29d06d0/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://javaeden.github.io/Clog/BsDoc/f29d06d0/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<script src="https://javaeden.github.io/Clog/BsDoc/f29d06d0/ajax/libs/bootbox.js/4.3.0/bootbox.min.js"></script>
+<script src="https://javaeden.github.io/Clog/BsDoc/f29d06d0/assets/js/bsdoc.js"></script>
+<script src="https://javaeden.github.io/Clog/ajax/libs/prism/1.8.4/prism.min.js"></script>
+<script src="https://javaeden.github.io/Clog/ajax/libs/prism/1.8.4/components/prism-yaml.min.js"></script>
+<script src="https://javaeden.github.io/Clog/ajax/libs/prism/1.8.4/components/prism-java.min.js"></script>
+<script src="https://javaeden.github.io/Clog/ajax/libs/prism/1.8.4/components/prism-groovy.min.js"></script>
+<script src="https://javaeden.github.io/Clog/ajax/libs/prism/1.8.4/components/prism-markdown.min.js"></script>
+<script src="https://javaeden.github.io/Clog/ajax/libs/prism/1.8.4/plugins/line-numbers/prism-line-numbers.min.js"></script>
+<script src="https://javaeden.github.io/Clog/ajax/libs/prism/1.8.4/plugins/line-highlight/prism-line-highlight.min.js"></script>
+<script src="https://javaeden.github.io/Clog/ajax/libs/prism/1.8.4/plugins/toolbar/prism-toolbar.min.js"></script>
+<script src="https://javaeden.github.io/Clog/ajax/libs/prism/1.8.4/plugins/show-language/prism-show-language.min.js"></script>
+<script src="https://javaeden.github.io/Clog/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
+<script src="https://javaeden.github.io/Clog/ajax/libs/prism/1.8.4/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+<!-- end:inject scripts -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/1.2.0/trianglify.min.js"></script>
+
+<script>
+    $(function () {
+        window.colors = ['#2a623d', '#000000'];
+                  
+    trianglify({"x_colors":["#000","#2a623d","#000"]});
+
+        buildNav();
+    });
+</script>
+
+</body>
+</html>

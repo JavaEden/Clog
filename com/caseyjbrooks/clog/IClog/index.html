@@ -1,0 +1,1804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+
+
+<meta charset="utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+<meta name="generator" content="Orchid 0.15.1"/>
+<link rel="icon" href="null">
+
+
+<meta name="robots" content="index, follow">
+
+
+
+<title>IClog</title>
+
+
+<meta name="description" content="Simple yet powerful logging and string formatting for Java">
+
+
+
+
+
+<script>
+    window.site = {"orchidVersion":"0.15.1","baseUrl":"https://javaeden.github.io/Clog","environment":"production","version":"2.0.7"};
+</script>
+
+
+
+
+<!-- start:inject styles -->
+<link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://javaeden.github.io/Clog/BsDoc/f29d06d0/ajax/libs/github-fork-ribbon-css/0.2.0/gh-fork-ribbon.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://javaeden.github.io/Clog/BsDoc/f29d06d0/assets/css/bsdoc.css"/>
+<link rel="stylesheet" type="text/css" href="https://javaeden.github.io/Clog/PrismJS/prism-themes/master/themes/prism-darcula.css"/>
+<link rel="stylesheet" type="text/css" href="https://javaeden.github.io/Clog/ajax/libs/prism/1.8.4/plugins/line-numbers/prism-line-numbers.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://javaeden.github.io/Clog/ajax/libs/prism/1.8.4/plugins/line-highlight/prism-line-highlight.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://javaeden.github.io/Clog/ajax/libs/prism/1.8.4/plugins/toolbar/prism-toolbar.min.css"/>
+<!-- end:inject styles -->
+
+
+</head>
+<body>
+
+
+
+
+<a class="github-fork-ribbon left-top"
+   href="https://github.com/JavaEden/Clog"
+   title="Fork me on GitHub">Fork me on GitHub</a>
+
+
+<header class="navbar navbar-fixed-top bs-docs-nav">
+    <div class="container">
+        <div class="navbar-header" role="banner">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://javaeden.github.io/Clog">Clog</a>
+        </div>
+        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Wiki<span class="caret"></span></a>
+                            <ul class="dropdown-menu scrollable-menu">
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/wiki/overview">Overview</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/wiki/download">Download</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/wiki/logging">Logging</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/wiki/parseltongue">Parseltongue</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/wiki/spells">The Standard Book of Spells</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/wiki/changelog">Changelog</a></li>
+                                
+                            </ul>
+                        </li>
+                    
+                
+                    
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Integrations<span class="caret"></span></a>
+                            <ul class="dropdown-menu scrollable-menu">
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/clog4j">Clog4j</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/android-clog">Android Clog</a></li>
+                                
+                            </ul>
+                        </li>
+                    
+                
+                    
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">All Packages<span class="caret"></span></a>
+                            <ul class="dropdown-menu scrollable-menu">
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog">com.caseyjbrooks.clog</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/parseltongue">com.caseyjbrooks.clog.parseltongue</a></li>
+                                
+                            </ul>
+                        </li>
+                    
+                
+                    
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">All Classes<span class="caret"></span></a>
+                            <ul class="dropdown-menu scrollable-menu">
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/Clog">Clog</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/Clog/Priority">Clog.Priority</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/ClogFormatter">ClogFormatter</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/ClogLogger">ClogLogger</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/ClogProfile">ClogProfile</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/DefaultLogger">DefaultLogger</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/EmptyLogger">EmptyLogger</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/IClog">IClog</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/parseltongue/Incantation">Incantation</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/parseltongue/MethodIncantation">MethodIncantation</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/parseltongue/Parseltongue">Parseltongue</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/ProfileSupplier">ProfileSupplier</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/parseltongue/Spell">Spell</a></li>
+                                
+                                    <li><a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/parseltongue/TheStandardBookOfSpells">TheStandardBookOfSpells</a></li>
+                                
+                            </ul>
+                        </li>
+                    
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+<div id="top"></div>
+
+
+    <div class="bs-docs-masthead" id="jumbotron">
+        <div class="container">
+            <h1 class="home-title">IClog</h1>
+        </div>
+    </div>
+
+
+<div class="container bs-docs-container">
+    <div class="row">
+        <div class="col-md-9" role="main">
+        <nav aria-label="breadcrumb">
+    <ul class="breadcrumb">
+    
+    
+        <li class="breadcrumb-item active" aria-current="page">IClog</li>
+    
+    
+    </ul>
+</nav>
+        
+
+        
+        
+            
+    <!-- start:inject components -->
+    
+        
+            
+        
+            
+                
+                    
+                        <div class="orchid-sourcedoc">
+
+
+<p id="summary">
+    <b>In package <a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog">com.caseyjbrooks.clog</a></b>
+</p>
+<p>
+    <code style="padding: 0;">
+    public abstract class <a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/IClog">IClog</a> extends Object
+    </code>
+</p>
+<div class="class-description" id="description">
+
+</div>
+
+
+
+
+
+
+
+
+
+<h2 id="constructors">Constructors</h2>
+
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="constructor__public_IClog__">
+        <code>
+        public <a href="https://javaeden.github.io/Clog/com/caseyjbrooks/clog/IClog">IClog</a>()
+        </code>
+    </div>
+    <div class="panel-body"></div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item">No parameters</li>
+
+</ul>
+
+</div>
+
+
+
+
+    <h2 id="methods">Methods</h2>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__public_abstract_int_loggerInternal_String_logger__String_message__Throwable_throwable__Object_args_">
+        <code>
+        public abstract int loggerInternal(String logger, String message, Throwable throwable, Object args)
+        </code>
+    </div>
+    <div class="panel-body"></div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        String logger
+        </code>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        String message
+        </code>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        Throwable throwable
+        </code>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        Object args
+        </code>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        int
+        </code>
+    </div>
+    <div></div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__public_int_logger_String_logger__Throwable_throwable_">
+        <code>
+        public int logger(String logger, Throwable throwable)
+        </code>
+    </div>
+    <div class="panel-body"><p>Log a Throwable to a generic logger. Will print the stack trace of the throwable as the log
+message, and use the default tag, which if not specified will be the calling class's simple name.</p>
+</div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        String logger
+        </code>
+        
+            <br><br>
+            <div><p>the key of the logger to use</p>
+</div>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        Throwable throwable
+        </code>
+        
+            <br><br>
+            <div><p>the throwable to log</p>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        int
+        </code>
+    </div>
+    <div><p>int</p>
+</div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__public_int_logger_String_logger__String_message__Object_args_">
+        <code>
+        public int logger(String logger, String message, Object args)
+        </code>
+    </div>
+    <div class="panel-body"><p>Log a formatted message to a generic logger. Will use the default tag, which if not specified
+will be the calling class's simple name.</p>
+</div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        String logger
+        </code>
+        
+            <br><br>
+            <div><p>the key of the logger to use</p>
+</div>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        String message
+        </code>
+        
+            <br><br>
+            <div><p>the message to log. Should be marked up with your chosen formatter's markup,
+with objects passed in as varargs</p>
+</div>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        Object args
+        </code>
+        
+            <br><br>
+            <div><p>(optional) the arguments to pass to the formatter</p>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        int
+        </code>
+    </div>
+    <div><p>int</p>
+</div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__public_int_logger_String_logger__String_message__Throwable_throwable__Object_args_">
+        <code>
+        public int logger(String logger, String message, Throwable throwable, Object args)
+        </code>
+    </div>
+    <div class="panel-body"><p>Log a formatted message and a Throwable to a generic logger. Will use the default tag, which
+if not specified will be the calling class's simple name.</p>
+</div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        String logger
+        </code>
+        
+            <br><br>
+            <div><p>the key of the logger to use</p>
+</div>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        String message
+        </code>
+        
+            <br><br>
+            <div><p>the message to log. Should be marked up with your chosen formatter's markup,
+with objects passed in as varargs</p>
+</div>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        Throwable throwable
+        </code>
+        
+            <br><br>
+            <div><p>the throwable to log</p>
+</div>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        Object args
+        </code>
+        
+            <br><br>
+            <div><p>(optional) the arguments to pass to the formatter</p>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        int
+        </code>
+    </div>
+    <div></div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__public_int_log_Throwable_throwable_">
+        <code>
+        public int log(Throwable throwable)
+        </code>
+    </div>
+    <div class="panel-body"><p>Log a Throwable to the 'debug' logger. Will print the stack trace of the throwable as the log
+message, and use the default tag, which if not specified will be the calling class's simple name.</p>
+</div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        Throwable throwable
+        </code>
+        
+            <br><br>
+            <div><p>the throwable to log</p>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        int
+        </code>
+    </div>
+    <div><p>int</p>
+</div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__public_int_log_String_message__Object_args_">
+        <code>
+        public int log(String message, Object args)
+        </code>
+    </div>
+    <div class="panel-body"><p>Log a formatted message to the 'debug' logger. Will use the default tag, which if not specified
+will be the calling class's simple name.</p>
+</div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        String message
+        </code>
+        
+            <br><br>
+            <div><p>the message to log. Should be marked up with your chosen formatter's markup,
+with objects passed in as varargs</p>
+</div>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        Object args
+        </code>
+        
+            <br><br>
+            <div><p>(optional) the arguments to pass to the formatter</p>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        int
+        </code>
+    </div>
+    <div><p>int</p>
+</div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__public_int_log_String_message__Throwable_throwable__Object_args_">
+        <code>
+        public int log(String message, Throwable throwable, Object args)
+        </code>
+    </div>
+    <div class="panel-body"><p>Log a formatted message and a Throwable to the 'debug' logger. Will use the default tag, which
+if not specified will be the calling class's simple name.</p>
+</div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        String message
+        </code>
+        
+            <br><br>
+            <div><p>the message to log. Should be marked up with your chosen formatter's markup,
+with objects passed in as varargs</p>
+</div>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        Throwable throwable
+        </code>
+        
+            <br><br>
+            <div><p>the throwable to log</p>
+</div>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        Object args
+        </code>
+        
+            <br><br>
+            <div><p>(optional) the arguments to pass to the formatter</p>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        int
+        </code>
+    </div>
+    <div></div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__public_int_v_Throwable_throwable_">
+        <code>
+        public int v(Throwable throwable)
+        </code>
+    </div>
+    <div class="panel-body"><p>Log a Throwable to the 'debug' logger. Will print the stack trace of the throwable as the log
+message, and use the default tag, which if not specified will be the calling class's simple name.</p>
+</div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        Throwable throwable
+        </code>
+        
+            <br><br>
+            <div><p>the throwable to log</p>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        int
+        </code>
+    </div>
+    <div><p>int</p>
+</div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__public_int_v_String_message__Object_args_">
+        <code>
+        public int v(String message, Object args)
+        </code>
+    </div>
+    <div class="panel-body"><p>Log a formatted message to the 'debug' logger. Will use the default tag, which if not specified
+will be the calling class's simple name.</p>
+</div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        String message
+        </code>
+        
+            <br><br>
+            <div><p>the message to log. Should be marked up with your chosen formatter's markup,
+with objects passed in as varargs</p>
+</div>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        Object args
+        </code>
+        
+            <br><br>
+            <div><p>(optional) the arguments to pass to the formatter</p>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        int
+        </code>
+    </div>
+    <div><p>int</p>
+</div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__public_int_v_String_message__Throwable_throwable__Object_args_">
+        <code>
+        public int v(String message, Throwable throwable, Object args)
+        </code>
+    </div>
+    <div class="panel-body"><p>Log a formatted message and a Throwable to the 'debug' logger. Will use the default tag, which
+if not specified will be the calling class's simple name.</p>
+</div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        String message
+        </code>
+        
+            <br><br>
+            <div><p>the message to log. Should be marked up with your chosen formatter's markup,
+with objects passed in as varargs</p>
+</div>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        Throwable throwable
+        </code>
+        
+            <br><br>
+            <div><p>the throwable to log</p>
+</div>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        Object args
+        </code>
+        
+            <br><br>
+            <div><p>(optional) the arguments to pass to the formatter</p>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        int
+        </code>
+    </div>
+    <div></div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__public_int_d_Throwable_throwable_">
+        <code>
+        public int d(Throwable throwable)
+        </code>
+    </div>
+    <div class="panel-body"><p>Log a Throwable to the 'debug' logger. Will print the stack trace of the throwable as the log
+message, and use the default tag, which if not specified will be the calling class's simple name.</p>
+</div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        Throwable throwable
+        </code>
+        
+            <br><br>
+            <div><p>the throwable to log</p>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        int
+        </code>
+    </div>
+    <div><p>int</p>
+</div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__public_int_d_String_message__Object_args_">
+        <code>
+        public int d(String message, Object args)
+        </code>
+    </div>
+    <div class="panel-body"><p>Log a formatted message to the 'debug' logger. Will use the default tag, which if not specified
+will be the calling class's simple name.</p>
+</div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        String message
+        </code>
+        
+            <br><br>
+            <div><p>the message to log. Should be marked up with your chosen formatter's markup,
+with objects passed in as varargs</p>
+</div>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        Object args
+        </code>
+        
+            <br><br>
+            <div><p>(optional) the arguments to pass to the formatter</p>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        int
+        </code>
+    </div>
+    <div><p>int</p>
+</div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__public_int_d_String_message__Throwable_throwable__Object_args_">
+        <code>
+        public int d(String message, Throwable throwable, Object args)
+        </code>
+    </div>
+    <div class="panel-body"><p>Log a formatted message and a Throwable to the 'debug' logger. Will use the default tag, which
+if not specified will be the calling class's simple name.</p>
+</div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        String message
+        </code>
+        
+            <br><br>
+            <div><p>the message to log. Should be marked up with your chosen formatter's markup,
+with objects passed in as varargs</p>
+</div>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        Throwable throwable
+        </code>
+        
+            <br><br>
+            <div><p>the throwable to log</p>
+</div>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        Object args
+        </code>
+        
+            <br><br>
+            <div><p>(optional) the arguments to pass to the formatter</p>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        int
+        </code>
+    </div>
+    <div></div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__public_int_i_Throwable_throwable_">
+        <code>
+        public int i(Throwable throwable)
+        </code>
+    </div>
+    <div class="panel-body"><p>Log a Throwable to the 'debug' logger. Will print the stack trace of the throwable as the log
+message, and use the default tag, which if not specified will be the calling class's simple name.</p>
+</div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        Throwable throwable
+        </code>
+        
+            <br><br>
+            <div><p>the throwable to log</p>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        int
+        </code>
+    </div>
+    <div><p>int</p>
+</div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__public_int_i_String_message__Object_args_">
+        <code>
+        public int i(String message, Object args)
+        </code>
+    </div>
+    <div class="panel-body"><p>Log a formatted message to the 'debug' logger. Will use the default tag, which if not specified
+will be the calling class's simple name.</p>
+</div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        String message
+        </code>
+        
+            <br><br>
+            <div><p>the message to log. Should be marked up with your chosen formatter's markup,
+with objects passed in as varargs</p>
+</div>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        Object args
+        </code>
+        
+            <br><br>
+            <div><p>(optional) the arguments to pass to the formatter</p>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        int
+        </code>
+    </div>
+    <div><p>int</p>
+</div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__public_int_i_String_message__Throwable_throwable__Object_args_">
+        <code>
+        public int i(String message, Throwable throwable, Object args)
+        </code>
+    </div>
+    <div class="panel-body"><p>Log a formatted message and a Throwable to the 'debug' logger. Will use the default tag, which
+if not specified will be the calling class's simple name.</p>
+</div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        String message
+        </code>
+        
+            <br><br>
+            <div><p>the message to log. Should be marked up with your chosen formatter's markup,
+with objects passed in as varargs</p>
+</div>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        Throwable throwable
+        </code>
+        
+            <br><br>
+            <div><p>the throwable to log</p>
+</div>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        Object args
+        </code>
+        
+            <br><br>
+            <div><p>(optional) the arguments to pass to the formatter</p>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        int
+        </code>
+    </div>
+    <div></div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__public_int_w_Throwable_throwable_">
+        <code>
+        public int w(Throwable throwable)
+        </code>
+    </div>
+    <div class="panel-body"><p>Log a Throwable to the 'debug' logger. Will print the stack trace of the throwable as the log
+message, and use the default tag, which if not specified will be the calling class's simple name.</p>
+</div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        Throwable throwable
+        </code>
+        
+            <br><br>
+            <div><p>the throwable to log</p>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        int
+        </code>
+    </div>
+    <div><p>int</p>
+</div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__public_int_w_String_message__Object_args_">
+        <code>
+        public int w(String message, Object args)
+        </code>
+    </div>
+    <div class="panel-body"><p>Log a formatted message to the 'debug' logger. Will use the default tag, which if not specified
+will be the calling class's simple name.</p>
+</div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        String message
+        </code>
+        
+            <br><br>
+            <div><p>the message to log. Should be marked up with your chosen formatter's markup,
+with objects passed in as varargs</p>
+</div>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        Object args
+        </code>
+        
+            <br><br>
+            <div><p>(optional) the arguments to pass to the formatter</p>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        int
+        </code>
+    </div>
+    <div><p>int</p>
+</div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__public_int_w_String_message__Throwable_throwable__Object_args_">
+        <code>
+        public int w(String message, Throwable throwable, Object args)
+        </code>
+    </div>
+    <div class="panel-body"><p>Log a formatted message and a Throwable to the 'debug' logger. Will use the default tag, which
+if not specified will be the calling class's simple name.</p>
+</div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        String message
+        </code>
+        
+            <br><br>
+            <div><p>the message to log. Should be marked up with your chosen formatter's markup,
+with objects passed in as varargs</p>
+</div>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        Throwable throwable
+        </code>
+        
+            <br><br>
+            <div><p>the throwable to log</p>
+</div>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        Object args
+        </code>
+        
+            <br><br>
+            <div><p>(optional) the arguments to pass to the formatter</p>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        int
+        </code>
+    </div>
+    <div></div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__public_int_e_Throwable_throwable_">
+        <code>
+        public int e(Throwable throwable)
+        </code>
+    </div>
+    <div class="panel-body"><p>Log a Throwable to the 'debug' logger. Will print the stack trace of the throwable as the log
+message, and use the default tag, which if not specified will be the calling class's simple name.</p>
+</div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        Throwable throwable
+        </code>
+        
+            <br><br>
+            <div><p>the throwable to log</p>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        int
+        </code>
+    </div>
+    <div><p>int</p>
+</div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__public_int_e_String_message__Object_args_">
+        <code>
+        public int e(String message, Object args)
+        </code>
+    </div>
+    <div class="panel-body"><p>Log a formatted message to the 'debug' logger. Will use the default tag, which if not specified
+will be the calling class's simple name.</p>
+</div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        String message
+        </code>
+        
+            <br><br>
+            <div><p>the message to log. Should be marked up with your chosen formatter's markup,
+with objects passed in as varargs</p>
+</div>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        Object args
+        </code>
+        
+            <br><br>
+            <div><p>(optional) the arguments to pass to the formatter</p>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        int
+        </code>
+    </div>
+    <div><p>int</p>
+</div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__public_int_e_String_message__Throwable_throwable__Object_args_">
+        <code>
+        public int e(String message, Throwable throwable, Object args)
+        </code>
+    </div>
+    <div class="panel-body"><p>Log a formatted message and a Throwable to the 'debug' logger. Will use the default tag, which
+if not specified will be the calling class's simple name.</p>
+</div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        String message
+        </code>
+        
+            <br><br>
+            <div><p>the message to log. Should be marked up with your chosen formatter's markup,
+with objects passed in as varargs</p>
+</div>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        Throwable throwable
+        </code>
+        
+            <br><br>
+            <div><p>the throwable to log</p>
+</div>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        Object args
+        </code>
+        
+            <br><br>
+            <div><p>(optional) the arguments to pass to the formatter</p>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        int
+        </code>
+    </div>
+    <div></div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__public_int_wtf_Throwable_throwable_">
+        <code>
+        public int wtf(Throwable throwable)
+        </code>
+    </div>
+    <div class="panel-body"><p>Log a Throwable to the 'debug' logger. Will print the stack trace of the throwable as the log
+message, and use the default tag, which if not specified will be the calling class's simple name.</p>
+</div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        Throwable throwable
+        </code>
+        
+            <br><br>
+            <div><p>the throwable to log</p>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        int
+        </code>
+    </div>
+    <div><p>int</p>
+</div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__public_int_wtf_String_message__Object_args_">
+        <code>
+        public int wtf(String message, Object args)
+        </code>
+    </div>
+    <div class="panel-body"><p>Log a formatted message to the 'debug' logger. Will use the default tag, which if not specified
+will be the calling class's simple name.</p>
+</div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        String message
+        </code>
+        
+            <br><br>
+            <div><p>the message to log. Should be marked up with your chosen formatter's markup,
+with objects passed in as varargs</p>
+</div>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        Object args
+        </code>
+        
+            <br><br>
+            <div><p>(optional) the arguments to pass to the formatter</p>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        int
+        </code>
+    </div>
+    <div><p>int</p>
+</div>
+</div>
+
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading" id="method__public_int_wtf_String_message__Throwable_throwable__Object_args_">
+        <code>
+        public int wtf(String message, Throwable throwable, Object args)
+        </code>
+    </div>
+    <div class="panel-body"><p>Log a formatted message and a Throwable to the 'debug' logger. Will use the default tag, which
+if not specified will be the calling class's simple name.</p>
+</div>
+
+    
+<div class="panel-body">
+    <b>Parameters: </b>
+</div>
+<ul class="list-group">
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        String message
+        </code>
+        
+            <br><br>
+            <div><p>the message to log. Should be marked up with your chosen formatter's markup,
+with objects passed in as varargs</p>
+</div>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        Throwable throwable
+        </code>
+        
+            <br><br>
+            <div><p>the throwable to log</p>
+</div>
+        
+    </li>
+
+    <li class="list-group-item clearfix">
+        <code class="pull-left">
+        Object args
+        </code>
+        
+            <br><br>
+            <div><p>(optional) the arguments to pass to the formatter</p>
+</div>
+        
+    </li>
+
+</ul>
+
+    
+
+<div class="panel-footer">
+    <div><b>Returns: </b></div>
+    <div>
+        <code>
+        int
+        </code>
+    </div>
+    <div></div>
+</div>
+
+</div>
+
+
+
+</div>
+                    
+                
+            
+        
+    
+    <!-- end:inject components -->
+
+
+        
+        </div>
+
+        <!-- Page navigation
+        =========================================== -->
+        <div class="col-md-3" role="complementary">
+        <div class="bs-docs-sidebar hidden-print" id="bs-docs-sidebar">
+    
+
+    <ul class="nav bs-docs-sidenav">
+        
+    </ul>
+
+    
+    <!-- start:inject components -->
+    
+    <!-- end:inject components -->
+
+
+
+    <a class="back-to-top" href="#top">
+        <i class="glyphicon glyphicon-chevron-up"></i> Back to top
+    </a>
+</div>
+
+        </div>
+    </div>
+</div>
+
+
+<div id="footer">
+    <div class="container bs-docs-container">
+    <footer class="bs-docs-footer" role="contentinfo">
+    <div class="row">
+        <div class="col-xs-12">
+            <nav aria-label="navigateClasses">
+                <ul class="pager">
+                    
+
+                    
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="icons">
+    
+    
+        <a href="https://github.com/JavaEden/Clog" class="fa fa-github"></a>
+    
+    
+    </div>
+    <br>
+    <p>
+    Documentation template based on the
+    <a href="https://github.com/mistic100/jekyll-bootstrap-doc">Jekyll Bootstrap Doc</a>
+    Jekyll theme by the <a href="https://getbootstrap.com">Bootstrap team</a>. Site created with
+    <a href="https://orchid.netlify.com">Orchid</a>.
+</p>
+
+<ul class="bs-docs-footer-links muted">
+    <li>Currently 2.0.7</li>
+</ul>
+
+</footer>
+    </div>
+</div>
+
+
+<!-- start:inject scripts -->
+<script src="https://javaeden.github.io/Clog/BsDoc/f29d06d0/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://javaeden.github.io/Clog/BsDoc/f29d06d0/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<script src="https://javaeden.github.io/Clog/BsDoc/f29d06d0/ajax/libs/bootbox.js/4.3.0/bootbox.min.js"></script>
+<script src="https://javaeden.github.io/Clog/BsDoc/f29d06d0/assets/js/bsdoc.js"></script>
+<script src="https://javaeden.github.io/Clog/ajax/libs/prism/1.8.4/prism.min.js"></script>
+<script src="https://javaeden.github.io/Clog/ajax/libs/prism/1.8.4/components/prism-yaml.min.js"></script>
+<script src="https://javaeden.github.io/Clog/ajax/libs/prism/1.8.4/components/prism-java.min.js"></script>
+<script src="https://javaeden.github.io/Clog/ajax/libs/prism/1.8.4/components/prism-groovy.min.js"></script>
+<script src="https://javaeden.github.io/Clog/ajax/libs/prism/1.8.4/components/prism-markdown.min.js"></script>
+<script src="https://javaeden.github.io/Clog/ajax/libs/prism/1.8.4/plugins/line-numbers/prism-line-numbers.min.js"></script>
+<script src="https://javaeden.github.io/Clog/ajax/libs/prism/1.8.4/plugins/line-highlight/prism-line-highlight.min.js"></script>
+<script src="https://javaeden.github.io/Clog/ajax/libs/prism/1.8.4/plugins/toolbar/prism-toolbar.min.js"></script>
+<script src="https://javaeden.github.io/Clog/ajax/libs/prism/1.8.4/plugins/show-language/prism-show-language.min.js"></script>
+<script src="https://javaeden.github.io/Clog/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
+<script src="https://javaeden.github.io/Clog/ajax/libs/prism/1.8.4/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+<!-- end:inject scripts -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/1.2.0/trianglify.min.js"></script>
+
+<script>
+    $(function () {
+        window.colors = ['#2a623d', '#000000'];
+                  
+    trianglify({"x_colors":["#000","#2a623d","#000"]});
+
+        buildNav();
+    });
+</script>
+
+</body>
+</html>

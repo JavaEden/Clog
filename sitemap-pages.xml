@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://javaeden.github.io/Clog/android-clog</loc>
+        <lastmod>2019-02-02T19:45:04.763</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://javaeden.github.io/Clog/clog4j</loc>
+        <lastmod>2019-02-02T19:45:04.774</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    
+</urlset>

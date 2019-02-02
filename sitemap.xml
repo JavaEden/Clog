@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/siteindex.xsd"
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <sitemap>
+        <loc>https://javaeden.github.io/Clog/sitemap-home.xml</loc>
+        <lastmod>2019-02-02T19:45:12.213</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>https://javaeden.github.io/Clog/sitemap-javadoc.xml</loc>
+        <lastmod>2019-02-02T19:45:12.220</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>https://javaeden.github.io/Clog/sitemap-pages.xml</loc>
+        <lastmod>2019-02-02T19:45:12.224</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>https://javaeden.github.io/Clog/sitemap-wiki.xml</loc>
+        <lastmod>2019-02-02T19:45:12.228</lastmod>
+    </sitemap>
+    
+</sitemapindex>

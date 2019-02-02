@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://javaeden.github.io/Clog/wiki</loc>
+        <lastmod>2019-02-02T19:45:05.221</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://javaeden.github.io/Clog/wiki/overview</loc>
+        <lastmod>2019-02-02T19:45:05.178</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://javaeden.github.io/Clog/wiki/download</loc>
+        <lastmod>2019-02-02T19:45:05.182</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://javaeden.github.io/Clog/wiki/logging</loc>
+        <lastmod>2019-02-02T19:45:05.188</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://javaeden.github.io/Clog/wiki/parseltongue</loc>
+        <lastmod>2019-02-02T19:45:05.191</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://javaeden.github.io/Clog/wiki/spells</loc>
+        <lastmod>2019-02-02T19:45:05.195</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    <url>
+        <loc>https://javaeden.github.io/Clog/wiki/changelog</loc>
+        <lastmod>2019-02-02T19:45:05.198</lastmod>
+        <priority>0.0</priority>
+        
+    </url>
+    
+</urlset>
