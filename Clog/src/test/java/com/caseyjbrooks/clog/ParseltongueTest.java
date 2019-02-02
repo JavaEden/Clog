@@ -482,6 +482,27 @@ public class ParseltongueTest {
         assertEquals(expectedOutput, output);
     }
 
+// Test Bugfixes
+//----------------------------------------------------------------------------------------------------------------------
+
+    @Test
+    public void testBugFixes() {
+        Parseltongue parseltongue = new Parseltongue();
+        parseltongue.findSpells(ParseltongueTest.class);
+
+        String input, expectedOutput, output;
+
+        input = "#";
+        expectedOutput = "#";
+        output = parseltongue.format(input);
+        assertEquals(expectedOutput, output);
+
+        input = "# and a #{$1} clog and also another # followed by another #{$2} clog";
+        expectedOutput = "# and a 1 clog and also another # followed by another 2 clog";
+        output = parseltongue.format(input, 1, 2);
+        assertEquals(expectedOutput, output);
+    }
+
 //test spells
 //--------------------------------------------------------------------------------------------------
 

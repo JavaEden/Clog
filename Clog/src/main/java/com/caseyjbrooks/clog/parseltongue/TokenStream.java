@@ -129,13 +129,13 @@ class TokenStream {
                 ch = chars.removeFirst();
                 column++;
 
-                if(ch == '#' && chars.peekFirst() == '{') {
+                if(ch == '#' && chars.size() > 0 && chars.peekFirst() == '{') {
                     chars.removeFirst();
                     column++;
                     ungetTokens.push(new Token(Token.Type.CLOG_START));
                     return new Token(Token.Type.ANY, s);
                 }
-                else if(ch == '{' && chars.peekFirst() == '}') {
+                else if(ch == '{' && chars.size() > 0 && chars.peekFirst() == '}') {
 //                    chars.removeFirst();
 //                    column++;
                     ungetTokens.push(new Token(Token.Type.CLOG_SIMPLE));
